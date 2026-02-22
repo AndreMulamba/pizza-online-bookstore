@@ -1,0 +1,24 @@
+let cart = [];
+let totalPrice = 0;
+
+function addToCart(name, price) {
+    cart.push({ name: name, price: price });
+    totalPrice += price;
+
+    updateCart();
+}
+
+function updateCart() {
+    const cartList = document.getElementById("cart-list");
+    const total = document.getElementById("total");
+
+    cartList.innerHTML = "";
+
+    cart.forEach(item => {
+        let li = document.createElement("li");
+        li.textContent = item.name + " - $" + item.price;
+        cartList.appendChild(li);
+    });
+
+    total.textContent = "Total: $" + totalPrice;
+}

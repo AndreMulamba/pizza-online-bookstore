@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pizza Menu</title>
+    <link rel="stylesheet" 
+href="style.css">
+</head>
+<body>
+
+    <h1>🍕 Pizza Menu</h1>
+
+    <div class="menu">
+
+        <div class="pizza-card">
+            <h2>Pepperoni</h2>
+            <p>Classic pepperoni with mozzarella cheese</p>
+            <p class="price">$12</p>
+            <button onclick="addToCart('Pepperoni', 12)">Add to Cart</button>
+        </div>
+
+        <div class="pizza-card">
+            <h2>Margherita</h2>
+            <p>Fresh tomatoes, basil, and mozzarella</p>
+            <p class="price">$10</p>
+            <button onclick="addToCart('Margherita', 10)">Add to Cart</button>
+        </div>
+
+        <div class="pizza-card">
+            <h2>BBQ Chicken</h2>
+            <p>Grilled chicken with BBQ sauce</p>
+            <p class="price">$14</p>
+            <button onclick="addToCart('BBQ Chicken', 14)">Add to Cart</button>
+        </div>
+
+    </div>
+
+    <h2>🛒 Cart</h2>
+    <ul id="cart-list"></ul>
+    <p id="total"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
