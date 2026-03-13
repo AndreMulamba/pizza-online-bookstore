@@ -24,5 +24,6 @@ function updateCart() {
 }
 function removeItem(index) {
   cart.splice(index, 1);
-  displayCart();
+  updateCart();
 }
+
