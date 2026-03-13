@@ -22,3 +22,7 @@ function updateCart() {
 
     total.textContent = "Total: $" + totalPrice;
 }
+function removeItem(index) {
+  cart.splice(index, 1);
+  displayCart();
+}
