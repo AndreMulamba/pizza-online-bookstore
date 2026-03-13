@@ -14,11 +14,18 @@ function updateCart() {
 
     cartList.innerHTML = "";
 
-    cart.forEach(item => {
-        let li = document.createElement("li");
-        li.textContent = item.name + " - $" + item.price;
-        cartList.appendChild(li);
-    });
+    cart.forEach((item, index) => {
+  let li = document.createElement("li");
+  li.textContent = item.name + " - $" + item.price + " ";
+
+  // Add remove button
+  let removeBtn = document.createElement("button");
+  removeBtn.textContent = "Remove";
+  removeBtn.onclick = () => removeItem(index);
+
+  li.appendChild(removeBtn);
+  cartList.appendChild(li);
+});
 
     total.textContent = "Total: $" + totalPrice;
 }
@@ -26,4 +33,5 @@ function removeItem(index) {
   cart.splice(index, 1);
   updateCart();
 }
+
 
